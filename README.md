@@ -11,7 +11,7 @@ A lightweight, header-only custom memory allocator (`memalloc`) written in C++17
 
 ## Architecture
 
-The allocator manages a total compile-time memory buffer of **2,560 bytes** (expandable via `buffer_size`) split into three structures:
+The allocator manages a total compile-time memory buffer of **256,000 bytes** (expandable via `buffer_size`) split into three structures:
 1. `main_pool`: The raw buffer where your objects and structural data actually live.
 2. `conf_buffer`: A tight bitmask array tracking which 32-byte blocks are currently rented or free.
 3. `data_buffer`: Keeps track of virtual address offsets and multi-block allocation chains.
