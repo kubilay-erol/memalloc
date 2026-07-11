@@ -239,7 +239,7 @@ int main() {
 
     uint32_t* data_ptr = memalloc::alloc(sizeof(animal));
 
-    animal* ptr = new ((uint32_t*)(*data_ptr)) animal;
+    animal* ptr = new ((uint32_t*)(*data_ptr)) animal{};
 
     ptr->ptr_d = data_ptr;
 
