@@ -4,11 +4,11 @@
 #include <cstdint>
 #include <new>
 
-constexpr uint32_t buffer_size = 32*8*1000; //preallocate 256'000 bytes compile time
+constexpr uint32_t buffer_size{32*8*1000}; //preallocate 256'000 bytes compile time
 
-constexpr uint32_t data_buffer_size = buffer_size/32;
+constexpr uint32_t data_buffer_size{buffer_size/32};
 
-constexpr uint32_t conf_buffer_size = buffer_size/(8*32);
+constexpr uint32_t conf_buffer_size{buffer_size/(8*32)};
 
 
 enum class limit : uint32_t {
